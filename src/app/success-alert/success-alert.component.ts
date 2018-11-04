@@ -18,6 +18,6 @@ import { Component } from "@angular/core";
         }
     `]
 })
-export class SuccessAlert {
+export class SuccessAlertComponent {
 
 }
