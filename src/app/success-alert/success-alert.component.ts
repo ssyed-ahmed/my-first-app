@@ -9,11 +9,12 @@ import { Component } from "@angular/core";
     `,
     styles: [`
         .my-alert {
-            width: '100%';
-            height: 40px;
-            background-color: green;
-            color: white;
+            height: 50px;
+            background-color: lightgreen;
+            border: 1px solid green;
             padding: 10px;
+            margin: 20px;
+            font-weight: bold;
         }
     `]
 })
