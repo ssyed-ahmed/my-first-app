@@ -1,2 +1,31 @@
-<app-warning-alert></app-warning-alert>
-<app-success-alert></app-success-alert>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <app-warning-alert></app-warning-alert>
+        <app-success-alert></app-success-alert>
+
+        <label for="username">Username: </label>
+        <input type="text" class="form-control" [(ngModel)]="username"
+          (input)="onUsernameInput()">
+        <br>
+        <p>{{username}}</p>
+        <br>
+        <button class="btn btn-primary"
+          [disabled]="isUserNameDisabled"
+          (click)="onResetUsername()">Reset Username</button>
+
+        <hr>
+
+        <button (click)="togglePasswordDisplay()" class="btn btn-success">Display Details</button>
+        
+        <p *ngIf="displayPassword">
+          Secret password = tuna
+        </p>
+        <p *ngFor="let date of displayClicks; let i = index" 
+          [ngStyle]="{'background-color': i >= 4 ? 'blue': 'white'}"
+          [ngClass]="{'log-style': i >= 4}">
+          {{date}} {{i}}
+        </p>
+    </div>
+  </div>
+</div>
